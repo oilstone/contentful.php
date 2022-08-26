@@ -12,6 +12,7 @@ declare(strict_types=1);
 namespace Contentful\Delivery\Resource;
 
 use Contentful\Core\Api\Link;
+use Contentful\Core\Exception\NotFoundException;
 use Contentful\Core\Resource\EntryInterface;
 use Contentful\Core\Resource\ResourceArray;
 use Contentful\Delivery\Client\ClientInterface;
