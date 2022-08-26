@@ -350,7 +350,11 @@ class Entry extends LocalizedResource implements EntryInterface, \ArrayAccess
         }
 
         if ($field instanceof Link) {
-            return $this->client->resolveLink($field, $locale);
+            try {
+                return $this->client->resolveLink($field, $locale);
+            } catch (NotFoundException) {
+                return null;
+            }
         }
 
         if (\is_array($field) && isset($field[0]) && $field[0] instanceof Link) {
