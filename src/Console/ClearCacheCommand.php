@@ -3,7 +3,7 @@
 /**
  * This file is part of the contentful/contentful package.
  *
- * @copyright 2015-2024 Contentful GmbH
+ * @copyright 2015-2025 Contentful GmbH
  * @license   MIT
  */
 
@@ -29,10 +29,10 @@ class ClearCacheCommand extends BaseCacheCommand
 
         $warmer = new CacheClearer($this->client, $this->resourcePool, $this->cacheItemPool);
         if (!$warmer->clear($cacheContent)) {
-            throw new \RuntimeException(sprintf('The SDK could not clear the cache. Try checking your PSR-6 implementation (class "%s").', \get_class($this->cacheItemPool)));
+            throw new \RuntimeException(\sprintf('The SDK could not clear the cache. Try checking your PSR-6 implementation (class "%s").', \get_class($this->cacheItemPool)));
         }
 
-        $output->writeln(sprintf(
+        $output->writeln(\sprintf(
             '<info>Cache cleared for space "%s" on environment "%s" using API "%s".</info>',
             $this->client->getSpaceId(),
             $this->client->getEnvironmentId(),

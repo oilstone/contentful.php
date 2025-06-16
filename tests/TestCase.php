@@ -3,7 +3,7 @@
 /**
  * This file is part of the contentful/contentful package.
  *
- * @copyright 2015-2024 Contentful GmbH
+ * @copyright 2015-2025 Contentful GmbH
  * @license   MIT
  */
 
@@ -110,7 +110,7 @@ class TestCase extends BaseTestCase
         ];
 
         if (!isset($config[$key])) {
-            throw new \InvalidArgumentException(sprintf('Key "%s" is not a valid value.', $key));
+            throw new \InvalidArgumentException(\sprintf('Key "%s" is not a valid value.', $key));
         }
 
         $defaultOptions = ClientOptions::create();

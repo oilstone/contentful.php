@@ -3,7 +3,7 @@
 /**
  * This file is part of the contentful/contentful package.
  *
- * @copyright 2015-2024 Contentful GmbH
+ * @copyright 2015-2025 Contentful GmbH
  * @license   MIT
  */
 
@@ -77,7 +77,7 @@ class Query
     {
         $validTypes = ['all', 'Asset', 'Entry', 'Deletion', 'DeletedAsset', 'DeletedEntry'];
         if (!\in_array($type, $validTypes, true)) {
-            throw new \InvalidArgumentException(sprintf('Unexpected type "%s".', $type));
+            throw new \InvalidArgumentException(\sprintf('Unexpected type "%s".', $type));
         }
 
         $this->type = $type;

@@ -3,7 +3,7 @@
 /**
  * This file is part of the contentful/contentful package.
  *
- * @copyright 2015-2024 Contentful GmbH
+ * @copyright 2015-2025 Contentful GmbH
  * @license   MIT
  */
 
@@ -94,7 +94,7 @@ class ResourceBuilder extends BaseResourceBuilder
             return $data['sys']['type'];
         }
 
-        throw new \InvalidArgumentException(sprintf('Unexpected system type "%s" while trying to build a resource.', $data['sys']['type']));
+        throw new \InvalidArgumentException(\sprintf('Unexpected system type "%s" while trying to build a resource.', $data['sys']['type']));
     }
 
     public function build(array $data, ?ResourceInterface $resource = null)
